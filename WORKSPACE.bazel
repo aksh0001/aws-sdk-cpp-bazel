@@ -20,18 +20,10 @@ filegroup(
 )
 """
 
-http_archive(
-    name = "aws_sdk_cpp",
-    build_file_content = _ALL_CONTENT,
-    sha256 = "e371fbc42ea34b19acedcf9c33bab5e3cc1ceab012c0c770fbb3107d377eeaf6",
-    strip_prefix = "aws-sdk-cpp-1.9.76",
-    url = "https://github.com/aws/aws-sdk-cpp/archive/refs/tags/1.9.76.tar.gz",
-)
-
 new_git_repository(
     name = "aws_sdk_cpp",
     build_file_content = _ALL_CONTENT,
     recursive_init_submodules = True,
-    tag = "1.9.76",
     remote = "https://github.com/aws/aws-sdk-cpp",
+    tag = "1.9.76",
 )
