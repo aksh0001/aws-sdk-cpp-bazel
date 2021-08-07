@@ -1,7 +1,13 @@
 #include <iostream>
 
-int main() {
-  std::cout << "Hello, World!" << std::endl;
+#include "aws/core/Aws.h"
 
+int main() {
+  Aws::SDKOptions options;
+  Aws::InitAPI(options);
+  {
+    std::cout << "Hello, World!" << std::endl;
+  }
+  Aws::ShutdownAPI(options);
   return 0;
 }
