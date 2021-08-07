@@ -3,14 +3,7 @@ load("@rules_foreign_cc//foreign_cc:defs.bzl", "cmake")
 cc_binary(
     name = "main",
     srcs = ["main.cc"],
-    deps = [":hello"],
-)
-
-cc_library(
-    name = "hello",
-    srcs = ["hello.cc"],
-    hdrs = ["hello.h"],
-    linkstatic = False,
+    deps = [":aws_sdk_cpp"],
 )
 
 cmake(
@@ -23,21 +16,4 @@ cmake(
     },
     #    install = False,
     lib_source = "@aws_sdk_cpp//:all_srcs",
-    #    out_static_libs = [
-    #        "libaws-cpp-sdk-core.a",
-    #        "libaws-cpp-sdk-s3.a",
-    #        "libaws-cpp-sdk-rds.a",
-    #        "libaws-c-common.a",
-    #        "libaws-c-compression.a",
-    #        "libs2n.a",
-    #        "libaws-c-cal.a",
-    #        "libaws-c-io.a",
-    #        "libaws-c-http.a",
-    #        "libaws-c-auth.a",
-    #        "libaws-c-s3.a",
-    #        "libaws-c-mqtt.a",
-    #        "libaws-checksums.a",
-    #        "libaws-c-event-stream.a",
-    #        "libaws-crt-cpp.a",
-    #    ],
 )
