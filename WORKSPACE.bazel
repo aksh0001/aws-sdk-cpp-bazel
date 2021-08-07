@@ -23,7 +23,8 @@ filegroup(
 new_git_repository(
     name = "aws_sdk_cpp",
     build_file_content = _ALL_CONTENT,
+    commit = "472a4e54cef8039ac7e65560f169cfd848951009",
     recursive_init_submodules = True,
     remote = "https://github.com/aws/aws-sdk-cpp",
-    tag = "1.9.76",
+    shallow_since = "1628277923 +0000",
 )
