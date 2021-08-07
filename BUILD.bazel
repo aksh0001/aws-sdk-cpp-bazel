@@ -9,8 +9,10 @@ cc_binary(
 cmake(
     name = "aws_sdk_cpp",
     cache_entries = {
+        "CMAKE_BUILD_TYPE": "Release",
         "BUILD_ONLY": "s3;rds",
         "BUILD_SHARED_LIBS": "OFF",  # Use static libraries (.a) instead of shared (.so)
+        "ENABLE_TESTING": "OFF",
     },
     install = False,
     lib_source = "@aws_sdk_cpp//:all_srcs",
