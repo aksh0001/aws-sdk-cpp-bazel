@@ -16,7 +16,7 @@ cmake(
     },
     install = False,
     lib_source = "@aws_sdk_cpp//:all_srcs",
-    out_shared_libs = [
+    out_static_libs = [
         "libaws-cpp-sdk-core.a",
         "libaws-cpp-sdk-s3.a",
         "libaws-cpp-sdk-rds.a",
