@@ -12,5 +12,6 @@ cmake(
         "BUILD_ONLY": "s3;rds",
         "BUILD_SHARED_LIBS": "ON",
     },
+    install = False,
     lib_source = "@aws_sdk_cpp//:all_srcs",
 )
