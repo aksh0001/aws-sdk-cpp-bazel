@@ -23,6 +23,6 @@ http_archive(
     name = "aws_sdk_cpp",
     build_file_content = _ALL_CONTENT,
     #    sha256 = "0b8e7465dc5e98c757cc3650a20a7843ee4c3edf50aaf60bb33fd879690d2c73",
-    strip_prefix = "aws_sdk_cpp-472a4e54cef8039ac7e65560f169cfd848951009",
+    strip_prefix = "aws_sdk_cpp-1.9.76",
     url = "https://github.com/aws/aws-sdk-cpp/archive/refs/tags/1.9.76.tar.gz",
 )

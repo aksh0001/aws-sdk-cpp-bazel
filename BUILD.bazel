@@ -1,5 +1,16 @@
+load("@rules_foreign_cc//foreign_cc:defs.bzl", "cmake")
+
 cc_binary(
     name = "main",
     srcs = ["main.cc"],
-    deps = [],
+    deps = [":aws_sdk_cpp"],
+)
+
+cmake(
+    name = "aws_sdk_cpp",
+    cache_entries = {
+        "BUILD_ONLY": "s3;rds",
+        "BUILD_SHARED_LIBS": "ON",
+    },
+    lib_source = "@aws_sdk_cpp//:all_srcs",
 )
