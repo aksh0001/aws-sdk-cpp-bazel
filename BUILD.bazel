@@ -14,7 +14,7 @@ cmake(
         "BUILD_SHARED_LIBS": "OFF",  # Use static libraries (.a) instead of shared (.so)
         "ENABLE_TESTING": "OFF",
     },
-    install = False,
+    #    install = False,
     lib_source = "@aws_sdk_cpp//:all_srcs",
     out_static_libs = [
         "libaws-cpp-sdk-core.a",
