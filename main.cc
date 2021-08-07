@@ -1,5 +1,10 @@
-#include <iostream>
+#include "hello.h"
 
 int main() {
-  std::cout << "Hello" << std::endl;
+  SayHello();
+
+
+
+  SayGoodbye();
+  return 0;
 }
